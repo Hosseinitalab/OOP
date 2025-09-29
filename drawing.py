@@ -25,13 +25,16 @@ while True:
     elif shape == 'star':
         width = int(input('Enter Width: '))
         size = int(input('Enter Size: '))
-        colour = input('Enter Colour: ')
-        star(t, width, size, colour)
-    elif shape == 'square':
+        color = input('Enter Colour: ')
+        star(t, width, size, color)
+    elif shape == 'circle':
         radius = int(input('Enter Radius: '))
-        colour = input('Enter Colour: ')
-        circle(t, radius, colour)
+        color = input('Enter Colour: ')
+        circle(t, radius, color)
     else:
         print('Invalid shape entered !')
+    shape = input('Enter your desire shape: ')
+
 
 done()
+
