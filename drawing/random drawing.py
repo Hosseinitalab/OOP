@@ -1,14 +1,14 @@
-from turtle import *
+from turtle import Turtle, done
 from random import randint
 
-class drawing():
+class drawing(Turtle):
     def __init__(self):
-        self.object = Turtle()
+        super().__init__()
         self.shape = input('Enter your desire shape: ')
         self.repetition = int(input('Enter the Repetition: '))
         if self.shape == 'star':
-            self.width = int(input('Enter Width: '))
-            self.size = int(input('Enter Size: '))
+            self.w = int(input('Enter Width: '))
+            self.s = int(input('Enter Size: '))
             self.star()
         else:
             print('Invalid Shape.')
@@ -22,15 +22,15 @@ class drawing():
             x = randint(-200, 200)
             y = randint(-200, 200)
             
-            self.object.color(r, g, b)
-            self.object.width(self.width)
-            self.object.up()
-            self.object.goto(x, y)
-            self.object.down()
-            self.object.begin_fill()
+            self.color(r, g, b)
+            self.width(self.w)
+            self.up()
+            self.goto(x, y)
+            self.down()
+            self.begin_fill()
             for i in range(5):
-                self.object.forward(self.size)
-                self.object.left(144)
-            self.object.end_fill()
+                self.forward(self.s)
+                self.left(144)
+            self.end_fill()
 
 pencil = drawing()
